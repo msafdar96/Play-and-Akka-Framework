@@ -1,0 +1,23 @@
+.main{
+    text-align: center;
+}
+.dark-head{
+    background: black;
+    color: white;
+}
+.flex{
+    display: flex;
+}
+.inputText{
+    display: inline !important;
+    width: 30% !important;
+}
+.error{
+    color: red;
+}
+
+
+
+.card-margin{
+    margin: 15px;
+}

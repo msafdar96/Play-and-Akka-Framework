@@ -1,0 +1,26 @@
+# Routes
+
+#Home
+GET     /                           controllers.HomeController.index
+
+#Search
+GET     /freelancelot                                       controllers.SearchController.index()
+GET     /freelancelot/search                                controllers.SearchController.search()
+
+GET     /freelancelot/descriptionReadability                controllers.SearchController.descriptionReadability()
+#GET     /freelancelot/session                               controllers.SearchController.createSession(request : Request)
+GET     /freelancelot/search/:keyword/:index/readability    controllers.SearchController.showReadability(keyword : String, index : Integer)
+
+GET     /freelancelot/stats                                 controllers.SearchController.stats()
+GET     /freelancelot/search/:keyword/:index/projectstats   controllers.SearchController.projectStats(keyword : String, index : Integer)
+GET     /freelancelot/search/:keyword/globalstats           controllers.SearchController.globalStats(keyword : String)
+
+GET     /freelancelot/skills                                controllers.SearchController.skills()
+GET    /freelancelot/projects/:skill   controllers.SearchController.projectSkills(skill : String)
+
+GET     /freelancelot/user                                controllers.SearchController.user()
+GET    /freelancelot/userdetails/:id   controllers.SearchController.userDetails(id : String)
+
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
